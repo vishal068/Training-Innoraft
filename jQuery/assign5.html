@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment-5</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		.container{	
+			text-align:center;
+			margin: auto;
+			max-width: 1200px;
+		}
+		.top{
+			width: 100%;
+			background-color: #87CEEB;
+			height: 80px;
+			margin: 8px 8px 8px 0px;
+		}
+		.middle{
+			width: 100%;
+			overflow: auto;
+		}
+		.left{
+			background-color: #9fb626;
+			float: left;
+			width: 29.5%;
+			height: 400px;
+			margin-right: 0.5%;
+			margin-bottom: 8px;
+		}
+		.right{
+			float: right;
+			width: 70%;
+			height: 400px;
+			margin-bottom: 8px;
+		}
+		.up{
+			width: 100%;
+			height: 292px;
+			background-color: #deae1c;
+			margin-bottom: 8px;
+		}
+		.down{
+			width: 100%;
+			height: 100px;
+			background-color: #999966;
+		}
+		.bottom{
+			width: 100%;
+			background-color: #f1dd0c;
+			height: 80px;
+		}
+		#header{
+			color: white;
+			font-size: 25px;
+			display: inline-block;
+			margin-top: 20px;
+		}
+		#sidebar{
+			color: white;
+			font-size: 25px;
+			display: inline-block;
+			margin-top: 15px;
+		}
+		#main-content{
+			color: white;
+			font-size: 25px;
+			display: inline-block;
+			margin-top: 15px;
+		}
+		#extra-content{
+			color: white;
+			font-size: 25px;
+			display: inline-block;
+			margin-top: 30px;
+		}
+		#footer{
+			color: white;
+			font-size: 25px;
+			display: inline-block;
+			margin-top: 20px;
+		}
+		#pop
+		{
+			width: 100%;
+			/*height: 100%;*/
+			position: relative;
+			top: -580px;
+			background-color: rgba(0, 0,0, 0.8);
+			color: white;
+			display: none;
+		}
+		#message
+		{
+			padding-top: 220px;
+			padding-bottom: 210px;
+			font-size: 40px;
+			text-align:center;
+		}
+		#close
+		{
+			float: right;
+			position: relative;
+			right: 20px;
+			top: 10px;
+			font-size:30px;
+		}
+	</style>
+	<script type="text/javascript" language="javascript">
+ 		$(document).ready(function() {
+ 			$(".bottom").click(function(){
+ 				$("#pop").css("display","block" );
+ 			});
+ 			$('#close').click(function(){
+			  $("#pop").css("display","none" );
+			});
+ 		});
+ 	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<span id="header">
+					Header
+			</span>
+		</div>
+		
+		<div class="middle">
+			<div class="left">
+				<span id="sidebar">
+					Sidebar
+				</span>
+			</div>
+			<div class="right">
+				<div class="up">
+					<span id="main-content">
+						Main Content
+					</span>
+				</div>
+				<div class="down">
+					<span id="extra-content">
+						Extra Content
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<span id="footer">
+				Footer
+			</span>
+		</div>
+
+		<div id="pop">
+			<div id="close">
+				X
+			</div>
+			<div id="message">
+				<h3>I am a popup</h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
